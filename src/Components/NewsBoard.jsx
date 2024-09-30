@@ -22,7 +22,7 @@ const NewsBoard = ({ category }) => {
   return (
     <div className="container my-4">
       <h2 className="text-center mb-4">
-        Latest <span className="badge bg-danger">News</span>
+        Latest <span className="badge bg-danger">News App</span>
       </h2>
       {error ? (
         <p className="text-center text-danger">{error}</p>
