@@ -8,7 +8,7 @@ const Navbar = ({ setCategory }) => {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <span className="badge bg-light text-dark fs-4">NewsAPP</span>
+          <span className="badge bg-light text-dark fs-4">News APP</span>
         </a>
         <button
           className="navbar-toggler"
