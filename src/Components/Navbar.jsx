@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = ({setCategory}) => {
+const Navbar = ({ setCategory }) => {
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-tertiary"
@@ -21,37 +21,48 @@ const Navbar = ({setCategory}) => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item mx-2">
               <div
                 className="nav-link"
+                style={{ cursor: "pointer" }} 
                 onClick={() => setCategory("technology")}
               >
                 Technology
               </div>
             </li>
-            <li className="nav-item">
+            <li className="nav-item mx-2">
               <div
                 className="nav-link"
+                style={{ cursor: "pointer" }} 
                 onClick={() => setCategory("business")}
               >
-                Bussiness
+                Business
               </div>
             </li>
-            <li className="nav-item">
-              <div className="nav-link" onClick={() => setCategory("health")}>
+            <li className="nav-item mx-2">
+              <div
+                className="nav-link"
+                style={{ cursor: "pointer" }} 
+                onClick={() => setCategory("health")}
+              >
                 Health
               </div>
             </li>
-            <li className="nav-item">
-              <div className="nav-link" onClick={() => setCategory("sports")}>
+            <li className="nav-item mx-2">
+              <div
+                className="nav-link"
+                style={{ cursor: "pointer" }} 
+                onClick={() => setCategory("sports")}
+              >
                 Sports
               </div>
             </li>
-            <li className="nav-item">
+            <li className="nav-item mx-2">
               <div
                 className="nav-link"
+                style={{ cursor: "pointer" }} 
                 onClick={() => setCategory("entertainment")}
               >
                 Entertainment

@@ -1,7 +1,5 @@
-
 import React, { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
-
 
 const NewsBoard = ({ category }) => {
   const [article, setArticle] = useState([]);
@@ -22,24 +20,28 @@ const NewsBoard = ({ category }) => {
   }, [category]);
 
   return (
-    <div>
-      <h2 className="text-center">
+    <div className="container my-4">
+      <h2 className="text-center mb-4">
         Latest <span className="badge bg-danger">News</span>
       </h2>
       {error ? (
-        <p>{error}</p>
+        <p className="text-center text-danger">{error}</p>
       ) : (
-        article && article.map((news, index) => {
-          return (
-            <NewsItem 
-              key={index}
-              title={news.title}
-              description={news.description}
-              src={news.urlToImage}
-              url={news.url}
-            />
-          );
-        })
+        <div className="row">
+          {article &&
+            article.map((news, index) => {
+              return (
+                <div className="col-lg-3 col-md-6 col-sm-12 mb-4" key={index}>
+                  <NewsItem
+                    title={news.title}
+                    description={news.description}
+                    src={news.urlToImage}
+                    url={news.url}
+                  />
+                </div>
+              );
+            })}
+        </div>
       )}
     </div>
   );
